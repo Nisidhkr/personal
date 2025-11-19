@@ -1,0 +1,25 @@
+{
+  "name": "tannu-birthday-surprise",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Birthday surprise website for Tannu 💞",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "cd backend && cross-env NODE_ENV=production node dist/index.js",
+    "install-all": "npm install && npm install --workspace=backend && npm install --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
