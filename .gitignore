@@ -9,3 +9,7 @@ coverage/
 .vscode/
 .idea/
 
+# Large video files (upload directly to Render or use cloud storage)
+backend/public/videos/*.mp4
+backend/public/videos/**/*.mp4
+
