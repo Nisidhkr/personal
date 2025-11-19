@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { VIDEO_CONFIG } from '../config/videos';
 
 interface Memory {
   title: string;
@@ -68,31 +69,31 @@ const MemoriesSection: React.FC = () => {
       title: "Big Bazaar – Pehli Mulaqat",
       description: "06 Jan 2021 – Jahan sab shuru hua. Pehli baar tumhe dekha aur dil ne kaha, ye ladki special hai.",
       icon: "🏬",
-      video: `${API_BASE_URL}/videos/memories/big-bazaar.mp4`
+      video: VIDEO_CONFIG.VIDEOS.BIG_BAZAAR
     },
     {
       title: "Woh Jagah Jahan Baithke Baatein Karte The",
       description: "Hostel ke neeche wala spot. Jahan bohot saari baithke baatein karte the. Ladai bhi, pyaar bhi, sab yahin hua.",
       icon: "💬",
-      video: `${API_BASE_URL}/videos/memories/sitting-talking.mp4`
+      video: VIDEO_CONFIG.VIDEOS.SITTING_TALKING
     },
     {
       title: "Maggi Point",
       description: "Late night maggi sessions. Har baar maggi ka bahana aur tumhare saath time bitane ka maza.",
       icon: "🍜",
-      video: `${API_BASE_URL}/videos/memories/maggi-point.mp4`
+      video: VIDEO_CONFIG.VIDEOS.MAGGI_POINT
     },
     {
       title: "Paratha Wali Jagah",
       description: "Jahan hum paratha khane jate the. Simple moments, lekin bohot special memories.",
       icon: "🥘",
-      video: `${API_BASE_URL}/videos/memories/paratha-spot.mp4`
+      video: VIDEO_CONFIG.VIDEOS.PARATHA_SPOT
     },
     {
       title: "Chandigarh Cricket Match",
       description: "Pehli baar hum dono akele itni door gaye. Cricket dekhne nahi, bas saath time bitane.",
       icon: "🏏",
-      video: `${API_BASE_URL}/videos/memories/chandigarh.mp4`
+      video: VIDEO_CONFIG.VIDEOS.CHANDIGARH
     }
   ];
 
@@ -197,7 +198,7 @@ const MemoriesSection: React.FC = () => {
                 preload="metadata"
                 onError={() => handleVideoError('near-hostel')}
               >
-                <source src={`${API_BASE_URL}/videos/memories/near-hostel.mp4`} type="video/mp4" />
+                <source src={VIDEO_CONFIG.VIDEOS.NEAR_HOSTEL} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             )}

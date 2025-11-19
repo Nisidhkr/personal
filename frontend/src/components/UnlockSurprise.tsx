@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useWindowSize } from '../hooks/useWindowSize';
 import Gallery from './Gallery';
+import { VIDEO_CONFIG } from '../config/videos';
 
 // ========================================================================
 // ✏️ EDIT THESE CONFIGURATION VALUES
@@ -239,7 +240,7 @@ const UnlockSurprise: React.FC = () => {
                   onError={handleVideoError}
                 >
                   <source 
-                    src={`${API_BASE_URL}/videos/special-message.mp4`} 
+                    src={VIDEO_CONFIG.VIDEOS.SPECIAL_MESSAGE} 
                     type="video/mp4" 
                   />
                   Your browser does not support the video tag.
