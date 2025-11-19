@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
-    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "build": "npm ci && npm run build --workspace=frontend && npm run build --workspace=backend",
     "start": "cross-env NODE_ENV=production node backend/dist/index.js",
     "install-all": "npm install && npm install --workspace=backend && npm install --workspace=frontend"
   },
