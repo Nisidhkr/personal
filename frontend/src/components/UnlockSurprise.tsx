@@ -9,7 +9,6 @@ import { VIDEO_CONFIG } from '../config/videos';
 // ========================================================================
 const SECRET_CODE = '10-12-2020'; // Change to your special date (DD-MM-YYYY)
 const SECRET_HINT = "The date our forever started. (DD-MM-YYYY)"; // Customize the hint
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'; // Backend URL
 // ========================================================================
 
 const UnlockSurprise: React.FC = () => {

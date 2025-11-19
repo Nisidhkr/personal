@@ -8,9 +8,6 @@ interface Memory {
   video?: string;
 }
 
-// Backend URL - matches the API configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
 const MemoriesSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [videoErrors, setVideoErrors] = useState<{ [key: string]: boolean }>({});
